@@ -6,6 +6,8 @@ var token = "Bearer dZoPjwfABDnxJCeKtAwzVZTO5hyIYxzeiJ1p5mPE";
 Console.WriteLine("========================================");
 Console.WriteLine("Welcome to the Study Portal CLI");
 Console.WriteLine("========================================");
+Console.WriteLine("Beta Version 0.1");
+Console.WriteLine("========================================");
 
 if (token == null)
 {
