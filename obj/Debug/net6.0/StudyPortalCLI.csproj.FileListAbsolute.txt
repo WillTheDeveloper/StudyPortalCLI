@@ -13,3 +13,18 @@ D:\Projects\Web\Personal Development\StudyPortalCLI\obj\Debug\net6.0\refint\Stud
 D:\Projects\Web\Personal Development\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.pdb
 D:\Projects\Web\Personal Development\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.genruntimeconfig.cache
 D:\Projects\Web\Personal Development\StudyPortalCLI\obj\Debug\net6.0\ref\StudyPortalCLI.dll
+C:\Users\twitc\RiderProjects\StudyPortalCLI\bin\Debug\net6.0\StudyPortalCLI.exe
+C:\Users\twitc\RiderProjects\StudyPortalCLI\bin\Debug\net6.0\StudyPortalCLI.deps.json
+C:\Users\twitc\RiderProjects\StudyPortalCLI\bin\Debug\net6.0\StudyPortalCLI.runtimeconfig.json
+C:\Users\twitc\RiderProjects\StudyPortalCLI\bin\Debug\net6.0\StudyPortalCLI.dll
+C:\Users\twitc\RiderProjects\StudyPortalCLI\bin\Debug\net6.0\StudyPortalCLI.pdb
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.csproj.AssemblyReference.cache
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.AssemblyInfoInputs.cache
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.AssemblyInfo.cs
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.csproj.CoreCompileInputs.cache
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.dll
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\refint\StudyPortalCLI.dll
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.pdb
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\StudyPortalCLI.genruntimeconfig.cache
+C:\Users\twitc\RiderProjects\StudyPortalCLI\obj\Debug\net6.0\ref\StudyPortalCLI.dll
