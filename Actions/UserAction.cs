@@ -1,4 +1,6 @@
-﻿namespace StudyPortalCLI.Actions;
+﻿using StudyPortalCLI.Helpers;
+
+namespace StudyPortalCLI.Actions;
 
 using StudyPortalCLI.Endpoints;
 
@@ -43,7 +45,13 @@ internal class UserAction
         var request = new UserEndpoints(_token).GetUserById(convert);
         
         Console.WriteLine("Name: " + request.Result.Name);
+        if (admin)
+        {
+            Console.WriteLine("Email: " + request.Result.Email);
+        }
         Console.WriteLine("Username: " + request.Result.Username);
         Console.WriteLine("Bio: " + request.Result.Bio);
+        Console.WriteLine("Created: " + request.Result.Created.ToLongDateString());
+        Console.WriteLine("Admin: " + new BoolHelpers().BoolToString(request.Result.Admin));
     }
 }
