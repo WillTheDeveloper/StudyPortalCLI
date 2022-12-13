@@ -44,7 +44,10 @@ void Menu()
     switch (input)
     {
         case "User":
-            new UserAction(token).UserOperator();
+            new UserAction(token)?.UserOperator();
+            break;
+        case "Assignment":
+            new AssignmentAction(token)?.AssignmentOperator();
             break;
     }
 }

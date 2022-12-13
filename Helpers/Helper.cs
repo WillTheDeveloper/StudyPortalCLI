@@ -65,7 +65,7 @@ namespace APIHelper
             }
             catch (Exception ex)
             {
-                ex.HandleError();
+                Console.WriteLine(ex.Message);
                 return default;
             }
         }
