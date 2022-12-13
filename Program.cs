@@ -1,4 +1,5 @@
 ﻿using APIHelper;
+using StudyPortalCLI.Actions;
 using StudyPortalCLI.Endpoints;
 using StudyPortalCLI.Models;
 using StudyPortalCLI.Helpers;
@@ -20,6 +21,7 @@ else
 {
     Console.WriteLine("Token found... attempting authentication...");
     Authenticate();
+    Menu();
 }
 
 Task<User> Authenticate()
@@ -31,4 +33,18 @@ Task<User> Authenticate()
         Console.WriteLine("Note: Authenticated user is also an admin.");
     }
     return xx;
+}
+
+void Menu()
+{
+    Console.WriteLine("============Study Portal CLI============");
+    Console.WriteLine("Enter a name of a model you would like to interact with:");
+    var input = Console.ReadLine();
+
+    switch (input)
+    {
+        case "User":
+            new UserAction(token).UserOperator();
+            break;
+    }
 }
