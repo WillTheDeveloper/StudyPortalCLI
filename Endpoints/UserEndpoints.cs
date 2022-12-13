@@ -2,6 +2,7 @@
 
 using APIHelper;
 using StudyPortalCLI.Models;
+using StudyPortalCLI.Helpers;
 
 internal class UserEndpoints
 {
@@ -10,6 +11,18 @@ internal class UserEndpoints
     internal UserEndpoints(string token)
     {
         _token = token;
+    }
+
+    internal async Task<Models.User> GetCurrentUser()
+    {
+        var getModel = new GetModel()
+        {
+            Bearer = _token,
+            Uri = "https://studyportal.cloud/api/user/me"
+        };
+        var userRequest = await HttpHelper.GetRequest<DataGetter<Models.User>>(getModel);
+        var data = userRequest.Data;
+        return data;
     }
 
     internal async Task<Models.User> GetUserById(int id)
