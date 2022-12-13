@@ -49,5 +49,8 @@ void Menu()
         case "Assignment":
             new AssignmentAction(token)?.AssignmentOperator();
             break;
+        case "Institution":
+            new InstitutionAction(token)?.InstitutionOperator();
+            break;
     }
 }
