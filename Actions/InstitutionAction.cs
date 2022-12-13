@@ -39,7 +39,7 @@ public class InstitutionAction
     private async Task GetInstitutionByJoinCode()
     {
         Console.Clear();
-        Console.WriteLine("Enter joincode of the institution:");
+        Console.WriteLine("Enter join code of the institution:");
         var input = Console.ReadLine();
 
         var result = await new InstitutionEndpoints(_token).GetInstitutionByJoinCode(input);
