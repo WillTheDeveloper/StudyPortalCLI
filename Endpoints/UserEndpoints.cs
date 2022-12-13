@@ -1,4 +1,6 @@
-﻿namespace StudyPortalCLI.Endpoints;
+﻿using StudyPortalCLI.Errors;
+
+namespace StudyPortalCLI.Endpoints;
 
 using APIHelper;
 using StudyPortalCLI.Models;
@@ -32,7 +34,7 @@ internal class UserEndpoints
             Bearer = _token,
             Uri = "https://studyportal.cloud/api/user/" + id
         };
-        var userRequest = await HttpHelper.GetRequest<DataGetter<Models.User>>(getModel);
+        var userRequest = await HttpHelper.GetRequest<DataGetter<User>>(getModel);
         var data = userRequest.Data;
 
         return data;

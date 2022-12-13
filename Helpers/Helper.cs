@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using StudyPortalCLI.Errors;
 
 namespace APIHelper
 {
@@ -64,7 +65,7 @@ namespace APIHelper
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                ex.HandleError();
                 return default;
             }
         }

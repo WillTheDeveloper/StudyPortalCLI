@@ -1,4 +1,5 @@
-﻿using StudyPortalCLI.Helpers;
+﻿using StudyPortalCLI.Errors;
+using StudyPortalCLI.Helpers;
 
 namespace StudyPortalCLI.Actions;
 
@@ -16,7 +17,7 @@ internal class UserAction
         admin = new UserEndpoints(_token).GetCurrentUser().Result.Admin;
     }
 
-    internal void UserOperator()
+    internal async Task UserOperator()
     {
         Console.Clear();
         Console.WriteLine("Available user actions:");
@@ -35,12 +36,12 @@ internal class UserAction
         switch (number)
         {
             case 1:
-                FindAUserByTheirId();
+                await FindAUserByTheirId();
                 break;
         }
     }
     
-    private void FindAUserByTheirId()
+    private async Task FindAUserByTheirId()
     {
         Console.Clear();
         Console.WriteLine("Enter ID of user:");
@@ -48,16 +49,19 @@ internal class UserAction
 
         var convert = Convert.ToInt32(number);
 
-        var request = new UserEndpoints(_token).GetUserById(convert);
-        
-        Console.WriteLine("Name: " + request.Result.Name);
-        if (admin)
+        var user = await new UserEndpoints(_token).GetUserById(convert);
+
+        if (user != null)
         {
-            Console.WriteLine("Email: " + request.Result.Email);
+            Console.WriteLine("Name: " + user.Name);
+            if (admin)
+            {
+                Console.WriteLine("Email: " + user.Email);
+            }
+            Console.WriteLine("Username: " + user.Username);
+            Console.WriteLine("Bio: " + user.Bio);
+            Console.WriteLine("Created: " + user.Created.ToLongDateString());
+            Console.WriteLine("Admin: " + new BoolHelpers().BoolToString(user.Admin));
         }
-        Console.WriteLine("Username: " + request.Result.Username);
-        Console.WriteLine("Bio: " + request.Result.Bio);
-        Console.WriteLine("Created: " + request.Result.Created.ToLongDateString());
-        Console.WriteLine("Admin: " + new BoolHelpers().BoolToString(request.Result.Admin));
     }
 }
