@@ -21,6 +21,12 @@ internal class UserAction
         Console.Clear();
         Console.WriteLine("Available user actions:");
         Console.WriteLine("1. Get a user by their ID");
+        Console.WriteLine("2. Get current user");
+
+        if (admin)
+        {
+            Console.WriteLine("3. Get all users");
+        }
 
         var selection = Console.ReadLine();
 
