@@ -1,7 +1,11 @@
-﻿namespace StudyPortalCLI.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace StudyPortalCLI.Models;
 
 public class Institution
 {
-    public string Insitution { get; set; }
+    [JsonPropertyName("institution")]
+    public string InstitutionName { get; set; }
+    [JsonPropertyName("joincode")]
     public string Joincode { get; set; }
 }

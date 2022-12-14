@@ -44,7 +44,7 @@ public class InstitutionAction
 
         var result = await new InstitutionEndpoints(_token).GetInstitutionByJoinCode(input);
         
-        Console.WriteLine(result.Insitution);
+        Console.WriteLine(result.InstitutionName);
         Console.WriteLine(result.Joincode);
     }
 
@@ -58,7 +58,7 @@ public class InstitutionAction
 
         foreach (var place in collection)
         {
-            Console.WriteLine(start + " - " + place.Insitution + " (" + place.Joincode + ")");
+            Console.WriteLine(start + " - " + place.InstitutionName + " (" + place.Joincode + ")");
             start++;
         }
     }
