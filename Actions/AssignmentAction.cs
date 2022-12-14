@@ -28,7 +28,7 @@ internal class AssignmentAction
         switch (number)
         {
             case 1:
-                GetAssignmentByTheId();
+                await GetAssignmentByTheId();
                 break;
         }
     }
@@ -50,7 +50,7 @@ internal class AssignmentAction
         catch (Exception e)
         {
             e.HandleError();
-            AssignmentOperator();
+            await AssignmentOperator();
         }
     }
 }

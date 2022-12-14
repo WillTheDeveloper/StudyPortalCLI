@@ -1,4 +1,5 @@
-﻿using StudyPortalCLI.Errors;
+﻿using System.Diagnostics;
+using StudyPortalCLI.Errors;
 using StudyPortalCLI.Helpers;
 
 namespace StudyPortalCLI.Actions;

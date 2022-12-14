@@ -25,12 +25,12 @@ internal class InstitutionEndpoints
         return institutions;
     }
 
-    internal async Task<Institution> GetInstitutionByJoinCode(string JoinCode)
+    internal async Task<Institution> GetInstitutionByJoinCode(string joinCode)
     {
         var get = new GetModel()
         {
             Bearer = _token,
-            Uri = "https://studyportal.cloud/api/institution/" + JoinCode
+            Uri = "https://studyportal.cloud/api/institution/" + joinCode
         };
         var request = await HttpHelper.GetRequest<DataGetter<Institution>>(get);
         var data = request.Data;

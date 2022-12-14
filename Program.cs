@@ -1,4 +1,5 @@
-﻿using APIHelper;
+﻿using System.Diagnostics;
+using APIHelper;
 using StudyPortalCLI.Actions;
 using StudyPortalCLI.Endpoints;
 using StudyPortalCLI.Models;
@@ -12,6 +13,7 @@ Console.WriteLine("========================================");
 
 if (token == null)
 {
+    Debug.WriteLine("No token found.");
     Console.WriteLine("Please enter your token:");
     token = Console.ReadLine();
     Console.WriteLine("Attempting authentication...");
@@ -19,6 +21,7 @@ if (token == null)
 }
 else
 {
+    Debug.WriteLine("Token found.");
     Console.WriteLine("Token found... attempting authentication...");
     Authenticate();
     Menu();
@@ -44,13 +47,13 @@ void Menu()
     switch (input)
     {
         case "User":
-            new UserAction(token)?.UserOperator();
+            new UserAction(token).UserOperator();
             break;
         case "Assignment":
-            new AssignmentAction(token)?.AssignmentOperator();
+            new AssignmentAction(token).AssignmentOperator();
             break;
         case "Institution":
-            new InstitutionAction(token)?.InstitutionOperator();
+            new InstitutionAction(token).InstitutionOperator();
             break;
     }
 }
