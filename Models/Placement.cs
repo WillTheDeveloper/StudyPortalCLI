@@ -1,14 +1,16 @@
-﻿namespace StudyPortalCLI.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace StudyPortalCLI.Models;
 
 public class Placement
 {
-    public string Title { get; set; } = null!;
-    public string Company { get; set; } = null!;
-    public string Location { get; set; } = null!;
-    public string Role { get; set; } = null!;
-    public User User { get; set; } = null!;
-    public string Slug { get; set; } = null!;
-    public bool Open { get; set; }
-    public bool Active { get; set; }
-    public string Closing { get; set; } = null!;
+    [JsonPropertyName("title")] public string Title { get; set; } = null!;
+    [JsonPropertyName("company")] public string Company { get; set; } = null!;
+    [JsonPropertyName("location")] public string Location { get; set; } = null!;
+    [JsonPropertyName("role")] public string Role { get; set; } = null!;
+    [JsonPropertyName("user")] public User User { get; set; } = null!;
+    [JsonPropertyName("slug")] public string Slug { get; set; } = null!;
+    [JsonPropertyName("open")] public bool Open { get; set; }
+    [JsonPropertyName("active")] public bool Active { get; set; }
+    [JsonPropertyName("closing")] public string Closing { get; set; } = null!;
 }
