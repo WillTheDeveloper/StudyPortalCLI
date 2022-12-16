@@ -1,9 +1,11 @@
-﻿namespace StudyPortalCLI.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace StudyPortalCLI.Models;
 
 public class Kanban
 {
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public User User { get; set; }
-    public DateTime Created { get; set; }
+    [JsonPropertyName("name")] public string Name { get; set; } = null!;
+    [JsonPropertyName("description")] public string Description { get; set; } = null!;
+    [JsonPropertyName("user")] public User User { get; set; } = null!;
+    [JsonPropertyName("created")] public DateTime Created { get; set; }
 }
