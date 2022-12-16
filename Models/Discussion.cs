@@ -1,11 +1,13 @@
-﻿namespace StudyPortalCLI.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace StudyPortalCLI.Models;
 
 public class Discussion
 {
-    public string Title { get; set; }
-    public string Body { get; set; }
-    public Models.Group Group { get; set; }
-    public bool Locked { get; set; }
-    public User User { get; set; }
-    public DateTime Created { get; set; }
+    [JsonPropertyName("title")] public string Title { get; set; }
+    [JsonPropertyName("body")] public string Body { get; set; }
+    [JsonPropertyName("group")] public Models.Group Group { get; set; }
+    [JsonPropertyName("locked")] public bool Locked { get; set; }
+    [JsonPropertyName("user")] public User User { get; set; }
+    [JsonPropertyName("created")] public DateTime Created { get; set; }
 }
