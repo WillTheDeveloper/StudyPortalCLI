@@ -4,6 +4,6 @@ namespace StudyPortalCLI.Models;
 
 public class Subject
 {
-    [JsonPropertyName("subject")] public string Subject { get; set; } = null!;
+    [JsonPropertyName("subject")] public string Subjectt { get; set; } = null!;
     [JsonPropertyName("created")] public DateTime Created { get; set; }
 }
