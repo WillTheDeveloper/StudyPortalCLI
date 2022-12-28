@@ -39,7 +39,26 @@ internal class UserAction
             case 1:
                 await FindAUserByTheirId();
                 break;
+            case 2:
+                await GetCurrentUser();
+                break;
         }
+    }
+
+    private async Task GetCurrentUser()
+    {
+        Console.Clear();
+        var user = await new UserEndpoints(_token).GetCurrentUser();
+        
+        Console.WriteLine("Name: " + user.Name);
+        if (admin)
+        {
+            Console.WriteLine("Email: " + user.Email);
+        }
+        Console.WriteLine("Username: " + user.Username);
+        Console.WriteLine("Bio: " + user.Bio);
+        Console.WriteLine("Created: " + user.Created.ToLongDateString());
+        Console.WriteLine("Admin: " + new BoolHelpers().BoolToString(user.Admin));
     }
     
     private async Task FindAUserByTheirId()
