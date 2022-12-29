@@ -28,7 +28,7 @@ internal class AssignmentAction
         switch (number)
         {
             case 1:
-                await GetAssignmentByTheId();
+                GetAssignmentByTheId().Wait();
                 break;
         }
     }

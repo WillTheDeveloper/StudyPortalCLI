@@ -28,10 +28,10 @@ public class InstitutionAction
         switch (number)
         {
             case 1:
-                await GetInstitutionByJoinCode();
+                GetInstitutionByJoinCode().Wait();
                 break;
             case 2:
-                await GetAllInstitutions();
+                GetAllInstitutions().Wait();
                 break;
         }
     }

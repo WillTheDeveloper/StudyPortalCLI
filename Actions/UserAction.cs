@@ -37,10 +37,10 @@ internal class UserAction
         switch (number)
         {
             case 1:
-                await FindAUserByTheirId();
+                FindAUserByTheirId().Wait();
                 break;
             case 2:
-                await GetCurrentUser();
+                GetCurrentUser().Wait();
                 break;
         }
     }

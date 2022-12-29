@@ -30,6 +30,7 @@ internal class PlacementAction
         switch (number)
         {
             case 1:
+                GetACollectionOfReports().Wait();
                 break;
         }
     }
