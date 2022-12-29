@@ -2,17 +2,17 @@
 
 public class Webhook
 {
-    public string Name { get; set; }
-    public Uri Url { get; set; }
-    public User User { get; set; }
+    public string Name { get; set; } = null!;
+    public Uri Url { get; set; } = null!;
+    public User User { get; set; } = null!;
     public Boolean Active { get; set; }
-    public Triggers Triggers { get; set; }
+    public Triggers Triggers { get; set; } = null!;
 }
 
 public class Triggers
 {
-    public Post Posts { get; set; }
-    public Comment Comments { get; set; }
-    public Assignment Assignments { get; set; }
-    public Blog Blogs { get; set; }
+    public Post Posts { get; set; } = null!;
+    public Comment Comments { get; set; } = null!;
+    public Assignment Assignments { get; set; } = null!;
+    public Blog Blogs { get; set; } = null!;
 }
