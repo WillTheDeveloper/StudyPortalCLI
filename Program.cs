@@ -55,5 +55,8 @@ void Menu()
         case "Institution":
             new InstitutionAction(token).InstitutionOperator();
             break;
+        case "Post":
+            new PostAction(token).PostOperator();
+            break;
     }
 }

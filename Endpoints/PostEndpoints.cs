@@ -1,4 +1,5 @@
 ﻿using APIHelper;
+using StudyPortalCLI.Actions;
 using StudyPortalCLI.Models;
 
 namespace StudyPortalCLI.Endpoints;
@@ -29,7 +30,7 @@ internal class PostEndpoints
         
     }*/
 
-    internal async Task<Post> CreateNewPost(string title, string body, string subject)
+    internal async Task<Post> CreateNewPost(Post post)
     {
         var newpost = new PostModel<Post>()
         {
@@ -37,9 +38,11 @@ internal class PostEndpoints
             Uri = "https://studyportal.cloud/api/post/new",
             Content =
             {
-                Title = title,
-                Body = body,
-                Subject = subject
+                Title = post.Title,
+                Body = post.Body,
+                Subject = post.Subject,
+                Tag = post.Tag
+                /*User = new UserEndpoints(_token).GetCurrentUser().Result.Name*/
             }
         };
 
