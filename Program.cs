@@ -58,5 +58,8 @@ void Menu()
         case "Post":
             new PostAction(token).PostOperator();
             break;
+        case "Subject":
+            new SubjectAction(token).SubjectOperator();
+            break;
     }
 }
