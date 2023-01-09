@@ -47,6 +47,7 @@ public class ReportAction
         foreach (var r in collection)
         {
             Console.WriteLine(start + ": " + r.Post + " - " + r.Comment + " - " + r.User.Name);
+            start++;
         }
     }
 }
