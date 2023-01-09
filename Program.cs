@@ -61,5 +61,8 @@ void Menu()
         case "Subject":
             new SubjectAction(token).SubjectOperator();
             break;
+        case "Report":
+            new ReportAction(token).ReportOperator();
+            break;
     }
 }
