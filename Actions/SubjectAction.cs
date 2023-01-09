@@ -1,4 +1,6 @@
 ﻿using StudyPortalCLI.Endpoints;
+using StudyPortalCLI.Models;
+using Task = System.Threading.Tasks.Task;
 
 namespace StudyPortalCLI.Actions;
 
@@ -39,6 +41,13 @@ public class SubjectAction
             case 2:
                 CollectionOfSubjects().Wait();
                 break;
+            case 3:
+                if (admin)
+                {
+                    NewSubject().Wait();
+                    break;
+                }
+                break;
         }
     }
 
@@ -73,5 +82,23 @@ public class SubjectAction
             Console.WriteLine(start + ". " + subject.Subjectt);
             start++;
         }
+    }
+
+    private async Task NewSubject()
+    {
+        Console.Clear();
+        Console.WriteLine("Enter the name of the new subject:");
+        var name = Console.ReadLine();
+
+        var subject = new Subject
+        {
+            Subjectt = name
+        };
+
+        var complete = await new SubjectEndpoints(_token).CreateNewSubject(subject);
+        
+        Console.WriteLine("New subject created:");
+        Console.WriteLine("Name: " + complete.Subjectt);
+        Console.WriteLine("Created at: " + complete.Created.ToLongTimeString());
     }
 }

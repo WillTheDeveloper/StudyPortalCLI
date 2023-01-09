@@ -37,4 +37,22 @@ internal class SubjectEndpoints
 
         return data;
     }
+
+    internal async Task<Subject> CreateNewSubject(Subject subject)
+    {
+        var create = new PostModel<Subject>()
+        {
+            Bearer = _token,
+            Uri = "https://studyportal.cloud/api/subject/new",
+            Content =
+            {
+                Created = DateTime.Now,
+                Subjectt = subject.Subjectt
+            }
+        };
+
+        var request = await HttpHelper.PostRequest<Subject, Subject>(create);
+
+        return request;
+    }
 }
